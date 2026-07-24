@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding-top: 110px;
+  min-height: 100vh;
+  color: white;
+  background: linear-gradient(165deg, rgb(34, 69, 175), rgb(4, 57, 110));
+}
+
+body p,
+body h1 {
+  margin-bottom: 0 !important;
+}
+
+/* Desktop */
+.desktop-view-design {
+  width: 50%;
+  padding: 3rem;
+  background: rgb(11, 27, 47);
+  border-radius: 20px 0 0 20px;
+}
+
+.signup-section {
+  width: 50%;
+  padding: 3rem;
+  background: white;
+  color: black;
+  border-radius: 0 20px 20px 0;
+}
+
+.phone-view-header, hr{
+  display: none;
+}
+
+.input{
+  margin-bottom: 15px;
+}
+
+input{  
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.create-ac-btn{
+  margin: 15px 0 15px 0;
+}
+
+.create-ac-btn img{
+  width: 20px;
+}
+
+.check-box {
+  width: auto;
+  margin-right: 8px;
+}
+
+/* Tablet & Mobile */
+@media (max-width: 992px) {
+
+  body {
+    padding-top: 20px;
+  }
+
+  .desktop-view-design {
+    display: none;
+  }
+
+  .phone-view-header,hr {
+    display: block;
+  }
+
+  .signup-section {
+    padding-top: 25px !important;
+    width: 100%;
+    border-radius: 20px;
+  }
+
+  .desktop-view-design {
+    margin-bottom: 20px;
+  }
+}
