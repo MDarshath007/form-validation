@@ -62,6 +62,7 @@ input{
 }
 
 .google-btn {
+  padding: 0 auto 0 auto;
   background-color: gray;
   width: 100%;
 }
