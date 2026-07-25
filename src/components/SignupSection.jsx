@@ -168,7 +168,7 @@ function SignupSection() {
 
         <h6 className="text-center">OR</h6>
        
-       <div className="google-btn">
+       <div className="google-btn d-flex">
        <GoogleLogin 
           width="500"         
           onSuccess={(credentialResponse)=>{
