@@ -19,14 +19,14 @@ body h1 {
 
 /* Desktop */
 .desktop-view-design {
-  width: 50%;
+  width: 60%;
   padding: 3rem;
   background: rgb(11, 27, 47);
   border-radius: 20px 0 0 20px;
 }
 
 .signup-section,.sign-up-success {
-  width: 50%;
+  width: 40%;
   padding: 3rem;
   background: white;
   color: black;
@@ -62,8 +62,6 @@ input{
 }
 
 .google-btn {
-  padding: 0 10px 0 10px;
-  background-color: gray;
   width: 100%;
 }
 
