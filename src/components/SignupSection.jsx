@@ -3,61 +3,64 @@ import { GoogleLogin } from "@react-oauth/google";
 import { useNavigate } from "react-router-dom";
 
 function SignupSection() {
+
   const navigate = useNavigate();
 
-  const [errors, setErrors] = useState({});
+  const [errors, setErrors] = useState({})
 
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
     password: "",
     confirmPassword: "",
-    termsAccepted: false,
+    termsAccepted: false
   });
 
-  const handleChange = (e) => {
+   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
-
+    
     setFormData({
       ...formData,
-      [name]: type === "checkbox" ? checked : value,
+      [name]: type === "checkbox" ? checked : value
     });
   };
 
   console.log(formData);
 
   const handleSubmit = (e) => {
+    
     e.preventDefault();
 
-    const newErrors = {};
+    const newErrors = {}
 
     console.log("button clicked");
 
     if (!formData.fullName.trim()) {
-      newErrors.fullName = "Full name is required.";
+      newErrors.fullName = "Full name is required."
     }
 
     if (!formData.email.includes("@")) {
-      newErrors.email = "Enter a valid email address.";
+      newErrors.email = "Enter a valid email address."
     }
 
     if (formData.password.length < 8) {
-      newErrors.password = "Password must be atleast 8 characters.";
+      newErrors.password = "Password must be atleast 8 characters."
     }
 
     if (formData.password !== formData.confirmPassword) {
-      newErrors.confirmPassword = "Passwords do not match.";
+      newErrors.confirmPassword = "Passwords do not match."
     }
 
     if (!formData.termsAccepted) {
-      newErrors.termsAccepted = "You must accept the Terms and Conditions.";
+      newErrors.termsAccepted = "You must accept the Terms and Conditions."
     }
 
-    setErrors(newErrors);
+    setErrors(newErrors)
 
-    if (Object.keys(newErrors).length === 0) {
-      navigate("/account-created");
+    if(Object.keys(newErrors).length===0) {
+    navigate('/account-created')
     }
+
   };
 
   return (
@@ -72,7 +75,7 @@ function SignupSection() {
       </h1>
       <hr />
       <h1>Sign Up</h1>
-
+      
       <p className="my-3">
         Kindly fill in the details below to create your account
       </p>
@@ -89,13 +92,10 @@ function SignupSection() {
             value={formData.fullName}
             onChange={handleChange}
           />
-          <p
+          <p 
             className="text-danger 
             mt-1 
-            name-error"
-          >
-            {errors.fullName}
-          </p>
+            name-error">{errors.fullName}</p>
         </div>
 
         <div className=" input">
@@ -106,12 +106,10 @@ function SignupSection() {
             value={formData.email}
             onChange={handleChange}
           />
-          <p
-            className="text-danger 
+          <p className="text-danger 
             mt-1 
-            input"
-            id="email-error"
-          >
+            input" 
+            id="email-error">
             {errors.email}
           </p>
         </div>
@@ -124,11 +122,10 @@ function SignupSection() {
             value={formData.password}
             onChange={handleChange}
           />
-          <p
+          <p 
             className="text-danger 
-            mt-1 input"
-            id="weak-password"
-          >
+            mt-1 input" 
+            id="weak-password">
             {errors.password}
           </p>
         </div>
@@ -147,45 +144,42 @@ function SignupSection() {
         </div>
 
         <div className="term-conditions">
-          <input
+          <input 
             className="check-box m-0 p-0"
-            name="termsAccepted"
-            type="checkbox"
-            onChange={handleChange}
-          />{" "}
-          I agree to the <a href="">Terms & Conditions</a> and{" "}
-          <a href="">Privacy Policy</a>
-          <p
+            name="termsAccepted" 
+            type="checkbox"  
+            onChange={handleChange}/> I agree to the{" "}
+          <a href="">Terms & Conditions</a> and <a href="">Privacy Policy</a>
+          <p 
             className="text-danger 
-            mt-1"
-            id="passwords-no-match"
-          >
+            mt-1" 
+            id="passwords-no-match">
             {errors.termsAccepted}
           </p>
         </div>
 
-        <button
+        <button 
           className="btn btn-primary 
           w-100 
-          create-ac-btn"
-          type="submit"
-        >
+          create-ac-btn" 
+          type="submit">
           Create Account
         </button>
 
         <h6 className="text-center">OR</h6>
+       
+       <div className="google-btn">
+       <GoogleLogin 
+          width="100%"         
+          onSuccess={(credentialResponse)=>{
+          console.log(credentialResponse)
+          navigate('/account-created')
+          }}
+          onError={()=> console.log("Login Failed")}/>
+          </div>
 
-        <div className="google-btn text-center">
-          <GoogleLogin
-            width="600"
-            onSuccess={(credentialResponse) => {
-              console.log(credentialResponse);
-              navigate("/account-created");
-            }}
-            onError={() => console.log("Login Failed")}
-          />
-        </div>
       </div>
+
     </form>
   );
 }
