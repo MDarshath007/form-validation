@@ -39,7 +39,8 @@ A responsive React application that demonstrates client-side form validation and
 
 > - Account Created Page
 
-<img width="1920" height="1080" alt="Screenshot (119)" src="https://github.com/user-attachments/assets/d4996c3d-c993-4954-92eb-89cf90b11917" />
+<img width="1919" height="991" alt="image" src="https://github.com/user-attachments/assets/955da8b7-ad2b-4a5d-9b4e-7d7b78bfc351" />
+
 
 ## Installation
 
