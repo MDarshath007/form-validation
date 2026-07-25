@@ -170,7 +170,7 @@ function SignupSection() {
        
        <div className="google-btn">
        <GoogleLogin 
-          width="100%"         
+          width="500"         
           onSuccess={(credentialResponse)=>{
           console.log(credentialResponse)
           navigate('/account-created')
