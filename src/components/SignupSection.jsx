@@ -167,25 +167,14 @@ function SignupSection() {
         </button>
 
         <h6 className="text-center">OR</h6>
-
-        {/* <div 
-          className="btn btn-light 
-          border w-100 
-          create-ac-btn 
-          d-flex 
-          align-items-center 
-          gap-3 
-          justify-content-center">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/google/google-original.svg" />{" "}
-          Sign in with Google
-        </div> */}
        
        <GoogleLogin 
-         onSuccess={(credentialResponse)=>{
+          width="472"         
+          onSuccess={(credentialResponse)=>{
           console.log(credentialResponse)
           navigate('/account-created')
-         }}
-         onError={()=> console.log("Login Failed")}/>
+          }}
+          onError={()=> console.log("Login Failed")}/>
 
       </div>
 
