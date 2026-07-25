@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { GoogleLogin } from "@react-oauth/google";
 
 function SignupSection() {
 
@@ -52,7 +53,7 @@ function SignupSection() {
 
     setErrors(newErrors)
 
-    if(Object.keys(errors).length===0) {
+    if(Object.keys(newErrors).length===0) {
     console.log("Sign up success!")
     }
 
@@ -163,7 +164,7 @@ function SignupSection() {
 
         <h6 className="text-center">OR</h6>
 
-        <div 
+        {/* <div 
           className="btn btn-light 
           border w-100 
           create-ac-btn 
@@ -173,7 +174,13 @@ function SignupSection() {
           justify-content-center">
           <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/google/google-original.svg" />{" "}
           Sign in with Google
-        </div>
+        </div> */}
+       
+       <GoogleLogin 
+         onSuccess={(credentialResponse)=>{
+          console.log(credentialResponse)
+         }}
+         onError={()=> console.log("Login Failed")}/>
 
       </div>
 

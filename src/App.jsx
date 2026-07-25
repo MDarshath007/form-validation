@@ -5,12 +5,10 @@ import SignupSection from "./components/signup-section";
 function App() {
   return (
     <>
+    
     <div className="container-sm d-flex">
-
       <DesktopDesign />
-
       <SignupSection/>
-      
     </div>
     </>
   );
