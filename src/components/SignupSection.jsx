@@ -169,7 +169,7 @@ function SignupSection() {
         <h6 className="text-center">OR</h6>
        
        <GoogleLogin 
-          width="472"         
+          width="100%"         
           onSuccess={(credentialResponse)=>{
           console.log(credentialResponse)
           navigate('/account-created')
