@@ -1,7 +1,10 @@
 import { useState } from "react";
 import { GoogleLogin } from "@react-oauth/google";
+import { useNavigate } from "react-router-dom";
 
 function SignupSection() {
+
+  const navigate = useNavigate();
 
   const [errors, setErrors] = useState({})
 
@@ -55,7 +58,7 @@ function SignupSection() {
     setErrors(newErrors)
 
     if(Object.keys(newErrors).length===0) {
-    console.log("Login Success")
+    navigate('/account-created')
     }
 
   };
@@ -180,6 +183,7 @@ function SignupSection() {
        <GoogleLogin 
          onSuccess={(credentialResponse)=>{
           console.log(credentialResponse)
+          navigate('/account-created')
          }}
          onError={()=> console.log("Login Failed")}/>
 
