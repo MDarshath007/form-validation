@@ -61,7 +61,18 @@ input{
   margin-right: 8px;
 }
 
+.google-btn {
+  background-color: gray;
+  width: 100%;
+}
 
+.google-btn div {
+  width: 100% !important;
+}
+
+.google-btn iframe {
+  width: 100% !important;
+}
 
 .fa-circle-check{
   font-size: 100px;
