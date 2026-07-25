@@ -13,11 +13,12 @@ function SignupSection() {
     termsAccepted: false
   });
 
-  const handleChange = (e) => {
+   const handleChange = (e) => {
+    const { name, value, type, checked } = e.target;
+    
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value,
-      [e.target.name]: e.target.type
+      [name]: type === "checkbox" ? checked : value
     });
   };
 
@@ -54,7 +55,7 @@ function SignupSection() {
     setErrors(newErrors)
 
     if(Object.keys(newErrors).length===0) {
-    console.log("Sign up success!")
+    console.log("Login Success")
     }
 
   };
