@@ -19,14 +19,14 @@ body h1 {
 
 /* Desktop */
 .desktop-view-design {
-  width: 60%;
+  width: 65%;
   padding: 3rem;
   background: rgb(11, 27, 47);
   border-radius: 20px 0 0 20px;
 }
 
 .signup-section,.sign-up-success {
-  width: 40%;
+  width: 35%;
   padding: 3rem;
   background: white;
   color: black;
