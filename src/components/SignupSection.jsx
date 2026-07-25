@@ -176,7 +176,7 @@ function SignupSection() {
           navigate('/account-created')
           }}
           onError={()=> console.log("Login Failed")}/>
-          asdf</div>
+          </div>
 
       </div>
 
