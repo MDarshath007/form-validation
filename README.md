@@ -1,16 +1,94 @@
-# React + Vite
+# Form Validation & Google OAuth
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive React application that demonstrates client-side form validation and Google OAuth authentication. The project provides real-time validation feedback and allows users to sign in securely using their Google account.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Responsive signup form
+- Client-side form validation
+- Full Name validation
+- Email validation
+- Password strength validation
+- Confirm Password matching
+- Terms & Conditions checkbox validation
+- Google OAuth Sign-In
+- Success page after account creation
+- Built using React Hooks (`useState`)
+- Client-side navigation using React Router
 
-## React Compiler
+## Technologies Used
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React
+- React Router DOM
+- Bootstrap
+- Google OAuth (@react-oauth/google)
+- Vite
+- HTML5
+- CSS3
+- JavaScript (ES6+)
 
-## Expanding the ESLint configuration
+## Screenshots
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+> - Signup Form
+
+<img width="1920" height="1080" alt="Screenshot (123)" src="https://github.com/user-attachments/assets/08508f2c-0d0c-4833-94cf-74f6ef77e91a" />
+
+> - Validation Errors
+
+<img width="1920" height="1080" alt="Screenshot (119)" src="https://github.com/user-attachments/assets/8335d401-955c-439f-a52d-c5ad78b48008" />
+
+> - Account Created Page
+
+<img width="1920" height="1080" alt="Screenshot (119)" src="https://github.com/user-attachments/assets/d4996c3d-c993-4954-92eb-89cf90b11917" />
+
+## Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/MDarshath007/form-validation.git
+```
+
+Navigate to the project folder:
+
+```bash
+cd your-repository
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Create a `.env` file and add your Google Client ID:
+
+```env
+VITE_GOOGLE_CLIENT_ID=your_google_client_id
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+## Live Demo
+
+https://form-validation-gules-theta.vercel.app/
+
+## Learning Outcomes
+
+This project helped me learn:
+
+- React controlled components
+- Form validation using React state
+- React Hooks (`useState`)
+- Google OAuth integration
+- React Router navigation
+- Environment variables with Vite
+- Deploying React applications on Vercel
+
+## License
+
+This project is created for learning and portfolio purposes.
